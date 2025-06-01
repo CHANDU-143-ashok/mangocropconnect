@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 30 95% 60%;
+    --color-primary-dark: 30 95% 50%;
+    --color-secondary: 140 40% 40%; 
+    --color-accent: 15 90% 55%;
+    --color-warning: 40 90% 50%;
+    --color-success: 120 60% 40%;
+    --color-error: 0 90% 60%;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply text-gray-800 bg-yellow-50;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-gray-900;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-orange-500 hover:bg-orange-600 text-white focus:ring-orange-500;
+  }
+
+  .btn-secondary {
+    @apply bg-green-600 hover:bg-green-700 text-white focus:ring-green-600;
+  }
+
+  .btn-outline {
+    @apply border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white focus:ring-orange-500;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg;
+  }
+
+  .badge {
+    @apply inline-block px-2 py-1 text-xs font-semibold rounded-full;
+  }
+
+  .badge-featured {
+    @apply bg-orange-500 text-white;
+  }
+}
